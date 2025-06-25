@@ -6,7 +6,7 @@ public class Staff {
     private int age;
     private String address;
     private String contact_no;
-    private String availability; // Represented as a single string
+    private String availability; 
 
     public Staff(int id, String password) {
         this.id = id;
