@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainSceneController">
+    <children>
+        <TableView fx:id="appointmentsTableView" layoutX="296.0" layoutY="50.0" prefHeight="174.0" prefWidth="278.0" style="-fx-background-color: #E1CD71;">
+            <columns>
+                <TableColumn fx:id="codeColumn" text="Code">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="code" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="durationColumnn" text="Duration">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="duration" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="dateColumn" text="Date">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="date" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="timeColumn" text="Time">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="time" />
+                    </cellValueFactory>
+                </TableColumn>
+                <!-- <TableColumn text="Staff ID" fx:id="staffIdColumn">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="staffId" />
+                    </cellValueFactory>
+                </TableColumn> -->
+                <TableColumn fx:id="serviceNameColumn" text="Service Name">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="serviceName" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="customerIdColumn" text="Customer ID">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="customerId" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn fx:id="statusColumn" text="Status">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="status" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+      <Label layoutX="328.0" layoutY="243.0" text="ID">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <TextField fx:id="request_id" layoutX="392.0" layoutY="239.0" />
+      <Label layoutX="320.0" layoutY="293.0" text="STATUS">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <TextField fx:id="request_status" layoutX="393.0" layoutY="289.0" />
+      <Button layoutX="384.0" layoutY="338.0" mnemonicParsing="false" onAction="#update_queries_status" style="-fx-background-color: #E1CD71;" text="UPDATE STATUS" textFill="WHITE" />
+      <ImageView fitHeight="400.0" fitWidth="681.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@page.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="47.0" layoutY="356.0" mnemonicParsing="false" onAction="#gotoadminmenu" prefHeight="26.0" prefWidth="150.0" style="-fx-border-color: #E1CD71; -fx-background-color: BLACK;" text="HOME" textFill="#e1cd71">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>
